@@ -1,0 +1,37 @@
+name: Unit
+
+on:
+  pull_request:
+  push:
+    # ci/** branches run it too: a new workflow cannot be started by hand
+    # before it is on main.
+    branches: [main, 'ci/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: unit-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  unit:
+    name: Unit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: Telosnex/telosnex_ci_tools/actions/setup-flutter@f97b50830596a30b24ea34c643a3b7dcce349972 # v0.5.15
+      - uses: Telosnex/telosnex_ci_tools/actions/lint@f97b50830596a30b24ea34c643a3b7dcce349972 # v0.5.15
+      - run: flutter pub get
+      - run: git ls-files '*.dart' | xargs dart format --output=none --set-exit-if-changed
+      - run: dart analyze --fatal-infos
+      - run: dart test -r expanded
+      - run: dart pub publish --dry-run

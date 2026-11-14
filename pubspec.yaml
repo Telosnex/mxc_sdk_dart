@@ -5,7 +5,6 @@ description: >-
   ProcessContainer, in process, through mxc_ffi.dll.
 version: 0.1.0
 repository: https://github.com/Telosnex/mxc_sdk_dart
-publish_to: none
 
 environment:
   sdk: ^3.10.0

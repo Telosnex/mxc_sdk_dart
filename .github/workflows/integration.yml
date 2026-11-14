@@ -1,0 +1,41 @@
+# Compile and load the Windows code asset. Container behavior is tested
+# separately on Windows 11 hosts with BaseContainer support.
+name: Integration
+
+on:
+  push:
+    branches: [main, 'ci/**']
+  schedule:
+    - cron: '37 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: integration-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  desktop-windows-x64:
+    name: Windows x64 build
+    runs-on: windows-2022
+    timeout-minutes: 90
+    steps: &windows_steps
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: Telosnex/telosnex_ci_tools/actions/setup-flutter@f97b50830596a30b24ea34c643a3b7dcce349972 # v0.5.15
+      - run: flutter pub get
+      # This builds mxc_ffi.dll through the hook. Hosted runners are not
+      # guaranteed to have BaseContainer; do not claim container coverage.
+      - run: dart test -x windows -r expanded
+  desktop-windows-arm64:
+    name: Windows ARM64 build
+    runs-on: windows-11-arm
+    timeout-minutes: 90
+    steps: *windows_steps

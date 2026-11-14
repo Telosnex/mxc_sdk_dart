@@ -1,0 +1,6 @@
+# Alert on every new MXC release, including patches.
+sources:
+  - name: microsoft/mxc
+    tags: https://github.com/microsoft/mxc.git
+    pin: {file: native_artifacts/sources.json, pattern: '"commit":\s*"([0-9a-f]{40})"'}
+    alert: patch
