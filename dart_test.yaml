@@ -1,0 +1,4 @@
+tags:
+  windows:
+    # Starts real MXC containers. Needs Windows 11 with BaseContainer.
+    timeout: 2x

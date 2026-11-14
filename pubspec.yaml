@@ -1,0 +1,21 @@
+name: mxc_sdk_dart
+description: >-
+  Dart port of the Microsoft MXC SDK (@microsoft/mxc-sdk) subset that
+  sandbox-runtime uses: probe and spawn a command in a Windows
+  ProcessContainer, in process, through mxc_ffi.dll.
+version: 0.1.0
+repository: https://github.com/Telosnex/mxc_sdk_dart
+publish_to: none
+
+environment:
+  sdk: ^3.10.0
+
+dependencies:
+  code_assets: ^2.0.0
+  ffi: ^2.1.4
+  hooks: ^2.0.0
+  kiln: ^1.0.0
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.28.0

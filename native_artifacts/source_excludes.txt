@@ -1,0 +1,9 @@
+# Native inputs: hook/, pubspec.yaml, and native_artifacts/sources.json (the
+# pinned mxc commit). The Dart API does not change the library.
+analysis_options.yaml
+dart_test.yaml
+lib/
+test/
+tool/
+README.md
+CHANGELOG.md
