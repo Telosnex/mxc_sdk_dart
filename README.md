@@ -76,13 +76,15 @@ The Kiln release workflow builds only Windows x64 and ARM64. Start it by hand
 with `dry_run` enabled to test the builds without uploading. A real run uploads
 the native libraries and creates a `kiln-manifest/<tag>` branch. Merge that
 branch before publishing the Dart package. Kiln check validates its manifest
-and download URLs; until the first native release, there is no manifest to
-check and Windows consumers build from source.
+and download URLs; until the first native release, it skips the check with an
+explanation because no manifest exists. Windows consumers build from source.
 
 Publish the first version to pub.dev by hand. Then enable automated publishing
 on the package's Admin page for `Telosnex/mxc_sdk_dart`, tag pattern
 `pub-mxc_sdk_dart-v{{version}}`, and GitHub environment `pub.dev`. Later releases
-use a tag such as `pub-mxc_sdk_dart-v0.1.1` matching `pubspec.yaml`.
+use a tag such as `pub-mxc_sdk_dart-v0.1.1` matching `pubspec.yaml`. To validate
+the publication pipeline without uploading, start Pub publish by hand and
+enter the prospective tag. Manual runs are always dry runs.
 
 Windows container tests need Windows 11 with BaseContainer support. The Linux
 Unit job does not run them. Integration builds the DLL and runs the other

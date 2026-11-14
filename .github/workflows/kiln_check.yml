@@ -14,5 +14,26 @@ permissions:
   contents: read
 
 jobs:
+  manifest:
+    name: Find manifest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      present: ${{ steps.manifest.outputs.present }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - id: manifest
+        shell: bash
+        run: |
+          if [[ -f native_artifacts/prebuilt.json ]]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "No native manifest yet. Run Kiln release and merge its manifest branch before publishing." >> "$GITHUB_STEP_SUMMARY"
+          fi
   kiln-check:
+    needs: manifest
+    if: needs.manifest.outputs.present == 'true'
     uses: Telosnex/telosnex_ci_tools/.github/workflows/kiln_check.yml@f97b50830596a30b24ea34c643a3b7dcce349972 # v0.5.15
