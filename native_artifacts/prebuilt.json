@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "sourceKey": "e8d09020a04bc8cc7edf6c76f866221cc24bc8964fdbc8b2d83a95436e775381",
-  "release": "https://github.com/Telosnex/mxc_sdk_dart/releases/tag/native-e8d09020a04bc8cc",
+  "sourceKey": "d62c95ce33e1c465c68abb13417f7aeed42efea8574544a85935d479f7e8f9f4",
+  "release": "https://github.com/Telosnex/mxc_sdk_dart/releases/tag/native-d62c95ce33e1c465",
   "targets": {
     "windows-arm64": {
-      "runner": "win11-vs2026-arm64 20261101.203.1",
-      "toolchain": "Visual Studio 18.11.3, cmake version 4.4.5, Rust 1.93 (aarch64-pc-windows-msvc)",
+      "runner": "win11-vs2026-arm64 20261112.217.1",
+      "toolchain": "Visual Studio 18.12.0, cmake version 4.5.0, Rust 1.93 (aarch64-pc-windows-msvc)",
       "files": [
         {
           "name": "mxc_ffi.dll",
-          "sha256": "f3f0f19bd77fdb53b8bab3c28b3633b8fac471a19f3c07ed1a8e8d22bd235ce0",
-          "url": "https://github.com/Telosnex/mxc_sdk_dart/releases/download/native-e8d09020a04bc8cc/windows-arm64-mxc_ffi.dll.gz",
-          "downloadSha256": "d29ce5e4a70acacf6b451212fd604327b18c7aca056785696438a93846cc45d6",
+          "sha256": "5eeea0055e6cb210bc40fafcd42b0b46d7f86e9c9eb37499e107df926f980529",
+          "url": "https://github.com/Telosnex/mxc_sdk_dart/releases/download/native-d62c95ce33e1c465/windows-arm64-mxc_ffi.dll.gz",
+          "downloadSha256": "241d70ff8023146b66dc138faa2cc67300e71264bcbbb33b2a92d6c5e2539d91",
           "delivery": "bundle",
           "asset": "mxc_ffi"
         }
@@ -23,9 +23,9 @@
       "files": [
         {
           "name": "mxc_ffi.dll",
-          "sha256": "ae60f7436d71b6341790167c8df5eaa74cdfc930760ad9f577d275c54572b98c",
-          "url": "https://github.com/Telosnex/mxc_sdk_dart/releases/download/native-e8d09020a04bc8cc/windows-x64-mxc_ffi.dll.gz",
-          "downloadSha256": "409e337c5cd583fb9a2aba661fea83dbad8cadde05b3f8288f8ad134ecef591d",
+          "sha256": "49bb82873833ff52bb86d5541151cb7118b6f59b1306bb6886e0e22aea541fd0",
+          "url": "https://github.com/Telosnex/mxc_sdk_dart/releases/download/native-d62c95ce33e1c465/windows-x64-mxc_ffi.dll.gz",
+          "downloadSha256": "64203195e1186cc659310e6d69c1f3cd5752009146de799770dc3ecbea354ba0",
           "delivery": "bundle",
           "asset": "mxc_ffi"
         }
