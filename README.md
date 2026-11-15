@@ -55,11 +55,21 @@ The build hook uses [kiln](https://github.com/Telosnex/kiln). It downloads
 `mxc_ffi.dll` from a GitHub release when `native_artifacts/prebuilt.json`
 matches the package sources. Otherwise it builds the `mxc_ffi` crate of
 microsoft/mxc at the commit in `native_artifacts/sources.json` (tag
-`v1.0.1`). A source build needs Windows, rustup, and the Rust target:
+`v1.1.0`). A source build needs Windows, rustup, and the Rust target:
 
 ```
 rustup target add aarch64-pc-windows-msvc x86_64-pc-windows-msvc
 ```
+
+### Telemetry
+
+The library is built without Microsoft telemetry routing. From 1.1.0, a
+release build of MXC sends Required diagnostic events to Microsoft, and
+`telemetry.enabled` does not turn them off (see
+[MXC diagnostic data](https://github.com/microsoft/mxc/blob/v1.1.0/docs/telemetry.md)).
+The hook builds with an empty `MXC_TELEMETRY_COMPONENT_PATH`, which MXC
+documents as the build without routing. It then fails if the built library
+contains the routing group of the MXC checkout.
 
 ## Tests
 

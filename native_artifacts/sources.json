@@ -4,7 +4,7 @@
     {
       "name": "mxc",
       "git": "https://github.com/microsoft/mxc.git",
-      "commit": "fda29ac63bc306b7f97f3b86b4b63d44f7f40cf2",
+      "commit": "c66201839d63cae2239db5e92f1f1d6076cf5181",
       "targets": ["windows-arm64", "windows-x64"]
     }
   ]

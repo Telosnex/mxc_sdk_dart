@@ -1,4 +1,4 @@
-// Ported from @microsoft/mxc-sdk 1.0.1, sdk/node/src/bindings/native-error.ts.
+// Ported from @microsoft/mxc-sdk 1.1.0, sdk/node/src/bindings/native-error.ts.
 // Copyright (c) Microsoft Corporation. Licensed under the MIT License.
 
 import 'dart:ffi';

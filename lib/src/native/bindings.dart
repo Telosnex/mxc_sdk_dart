@@ -1,4 +1,4 @@
-// Bindings for the C ABI of mxc_ffi (microsoft/mxc v1.0.1,
+// Bindings for the C ABI of mxc_ffi (microsoft/mxc v1.1.0,
 // src/ffi/mxc_ffi/src). The build hook bundles the library as the code asset
 // below. Each function is safe to call from any isolate.
 @DefaultAsset('package:mxc_sdk_dart/mxc_ffi')

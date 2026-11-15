@@ -1,4 +1,4 @@
-// Ported from @microsoft/mxc-sdk 1.0.1, sdk/node/src/v1/container-process.ts
+// Ported from @microsoft/mxc-sdk 1.1.0, sdk/node/src/v1/container-process.ts
 // and the lifecycle driver of sdk/node/src/bindings/streaming.ts.
 // Copyright (c) Microsoft Corporation. Licensed under the MIT License.
 //

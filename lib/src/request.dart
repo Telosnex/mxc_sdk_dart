@@ -1,4 +1,4 @@
-// Ported from @microsoft/mxc-sdk 1.0.1: createContainerConfig and
+// Ported from @microsoft/mxc-sdk 1.1.0: createContainerConfig and
 // prepareContainerRequest of sdk/node/src/v1/container.ts, and
 // prepareOneShotRequest of sdk/node/src/bindings/one-shot.ts. The two steps
 // make one function here, for the containments this SDK supports.

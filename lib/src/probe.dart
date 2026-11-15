@@ -1,4 +1,4 @@
-// Ported from @microsoft/mxc-sdk 1.0.1, sdk/node/src/v1/probe.ts and
+// Ported from @microsoft/mxc-sdk 1.1.0, sdk/node/src/v1/probe.ts and
 // sdk/node/src/bindings/probe.ts.
 // Copyright (c) Microsoft Corporation. Licensed under the MIT License.
 

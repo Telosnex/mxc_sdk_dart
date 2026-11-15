@@ -1,4 +1,4 @@
-// Ported from @microsoft/mxc-sdk 1.0.1, sdk/node/src/v1/types.ts: the request
+// Ported from @microsoft/mxc-sdk 1.1.0, sdk/node/src/v1/types.ts: the request
 // and probe types of the Windows ProcessContainer path.
 // Copyright (c) Microsoft Corporation. Licensed under the MIT License.
 
