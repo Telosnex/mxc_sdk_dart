@@ -28,6 +28,9 @@ if (probe(request).tier == IsolationTier.baseContainer) {
 }
 ```
 
+See [example/main.dart](example/main.dart) for a runnable probe that does
+not launch a container.
+
 ## Scope
 
 | Node SDK (`@microsoft/mxc-sdk/v1`) | Here |

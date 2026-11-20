@@ -3,7 +3,7 @@ description: >-
   Dart port of the Microsoft MXC SDK (@microsoft/mxc-sdk) subset that
   sandbox-runtime uses: probe and spawn a command in a Windows
   ProcessContainer, in process, through mxc_ffi.dll.
-version: 0.1.1
+version: 0.1.2
 repository: https://github.com/Telosnex/mxc_sdk_dart
 
 environment:

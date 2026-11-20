@@ -1,3 +1,8 @@
+## 0.1.2
+
+- Add a runnable example that checks whether MXC can enforce a container
+  request without launching it.
+
 ## 0.1.1
 
 - `mxc_ffi.dll` is built from microsoft/mxc v1.1.0. The Dart API is unchanged.
